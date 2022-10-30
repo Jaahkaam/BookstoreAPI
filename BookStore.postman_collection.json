@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "8e44a44c-0bdf-4eb9-95d1-c4092d959cb2",
+		"name": "BookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8977561"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"username\": \"Admin\",\r\n        \"authorized\": true\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/setup/user/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"username\": \"Administrator\",\r\n            \"authorized\": true\r\n        },\r\n        {\r\n            \"username\": \"Staff\",\r\n            \"authorized\": false\r\n        },\r\n        {\r\n            \"username\": \"Intern\",\r\n            \"authorized\": false\r\n        }\r\n    ]\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/setup/user/addUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"user",
+						"addUsers"
+					]
+				},
+				"description": "Test Author"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/setup/user/getAllUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"user",
+						"getAllUsers"
+					]
+				},
+				"description": "Retrieve Authors"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Author\",\r\n        \"birthday\": \"01/12/1890\"\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/setup/author/addAuthor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"author",
+						"addAuthor"
+					]
+				},
+				"description": "Test Author"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Authors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"name\": \"Author 2\",\r\n            \"birthday\": \"01/12/2021\"\r\n        },\r\n        {\r\n            \"name\": \"Author 3\",\r\n            \"birthday\": \"01/12/2000\"\r\n        },\r\n        {\r\n            \"name\": \"Author 4\",\r\n            \"birthday\": \"01/12/1998\"\r\n        },\r\n        {\r\n            \"name\": \"Author 5\",\r\n            \"birthday\": \"01/12/1991\"\r\n        }\r\n    ]\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/setup/author/addAuthors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"author",
+						"addAuthors"
+					]
+				},
+				"description": "Test Author"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Authors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/setup/author/getAllAuthors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setup",
+						"author",
+						"getAllAuthors"
+					]
+				},
+				"description": "Retrieve Authors"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Fake Admin\",\r\n    \"data\": {\r\n        \"isbn\": \"9783127323241\",\r\n        \"title\": \"The Book\",\r\n        \"pubYear\": \"2022\",\r\n        \"price\": \"12.9\",\r\n        \"genre\": \"horror\",\r\n        \"authorIds\": [1]\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/addBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"isbn\": \"9783127323242\",\r\n        \"title\": \"The Book 2\",\r\n        \"pubYear\": \"2022\",\r\n        \"price\": \"15\",\r\n        \"genre\": \"horror\",\r\n        \"authorIds\": [2,3]\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/addBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"isbn\": \"9783127323244\",\r\n            \"title\": \"The Book 3\",\r\n            \"pubYear\": \"2022\",\r\n            \"price\": \"62\",\r\n            \"genre\": \"fiction\",\r\n            \"authorIds\": [2,3]\r\n        },\r\n        {\r\n            \"isbn\": \"9783127323245\",\r\n            \"title\": \"The Book 4\",\r\n            \"pubYear\": \"2022\",\r\n            \"price\": \"100.22\",\r\n            \"genre\": \"best seller\",\r\n            \"authorIds\": [1,2,3]\r\n        },\r\n        {\r\n            \"isbn\": \"9783127323246\",\r\n            \"title\": \"The Book 5\",\r\n            \"pubYear\": \"2022\",\r\n            \"price\": \"9.22\",\r\n            \"genre\": \"action\",\r\n            \"authorIds\": [2,4]\r\n        },\r\n        {\r\n            \"isbn\": \"9783127323247\",\r\n            \"title\": \"The Book 6\",\r\n            \"pubYear\": \"2022\",\r\n            \"price\": \"13.2\",\r\n            \"genre\": \"sci-fi\",\r\n            \"authorIds\": [5]\r\n        }\r\n    ]\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/addBooks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"addBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/book/getAllBooks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"getAllBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin\",\r\n    \"data\": {\r\n        \"isbn\": \"9783127323241\",\r\n        \"title\": \"The Books\",\r\n        \"pubYear\": \"2000\",\r\n        \"price\": \"30\",\r\n        \"genre\": \"fantasy\",\r\n        \"authorIds\": [4,5]\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/updateBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"updateBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"title\": \"book\",\r\n        \"authorId\": null\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/findBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"findBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "12345",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Admin\",\r\n    \"data\": {\r\n        \"isbn\": \"9783127323241\"\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/secured/deleteBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"secured",
+						"deleteBook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
